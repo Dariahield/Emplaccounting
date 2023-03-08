@@ -24,7 +24,7 @@ public class EmployeeService {
         }
 
         Employee employee = new Employee(firstName, lastName);
-        if (employees.contains(employee)){
+        if (employees.contains(employee)) {
             throw new EmployeeAlreadyAddedException("В массиве уже есть такой сотрудник.");
         }
         employees.add(employee);
@@ -40,7 +40,7 @@ public class EmployeeService {
             }
         }
 
-        if(employee == null) {
+        if (employee == null) {
             throw new EmployeeNotFoundException("Сотрудник не найден.");
         }
 
