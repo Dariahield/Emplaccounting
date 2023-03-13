@@ -18,18 +18,20 @@ public class EmployeeController {
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(EmployeeNotFoundException.class)
-    public String handleException (EmployeeNotFoundException e) {
-        return String.format("%s %s",HttpStatus.NOT_FOUND.value(),e.getMessage());
+    public String handleException(EmployeeNotFoundException e) {
+        return String.format("%s %s", HttpStatus.NOT_FOUND.value(), e.getMessage());
     }
+
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(EmployeeAlreadyAddedException.class)
-    public String handleException (EmployeeAlreadyAddedException e) {
-        return String.format("%s %s",HttpStatus.NOT_FOUND.value(),e.getMessage());
+    public String handleException(EmployeeAlreadyAddedException e) {
+        return String.format("%s %s", HttpStatus.NOT_FOUND.value(), e.getMessage());
     }
+
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ExceptionHandler(EmployeeStorageIsFullException.class)
-    public String handleException (EmployeeStorageIsFullException e) {
-        return String.format("%s %s",HttpStatus.NOT_FOUND.value(),e.getMessage());
+    public String handleException(EmployeeStorageIsFullException e) {
+        return String.format("%s %s", HttpStatus.NOT_FOUND.value(), e.getMessage());
     }
 
     private final EmployeeService employeeService;
