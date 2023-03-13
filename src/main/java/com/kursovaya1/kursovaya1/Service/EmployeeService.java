@@ -23,7 +23,6 @@ public class EmployeeService {
             throw new EmployeeStorageIsFullException("Хранилище сотрудников переполнено");
 
         }
-
         Employee employee = new Employee(firstName, lastName);
         int employeeHashCode = employee.hashCode();
 
